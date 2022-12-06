@@ -1,0 +1,30 @@
+@use './colors.scss';
+@import './_mixins.scss';
+
+html,
+body, h1, h2, h3, h4, h5 {
+    margin: 0;
+    padding: 0;
+}
+
+* {
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+ul {
+    list-style: none;
+}
+
+.app {
+    display: flex;
+}
+
+//.input {
+//    @include input;
+//}
+//
+//
+//.button {
+//    @include button;
+//}
