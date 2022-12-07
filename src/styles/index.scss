@@ -33,6 +33,9 @@ ul {
     background: url('../images/bg-desktop-light.jpg') no-repeat;
 
     &__components-wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 2.2em;
         width: 37.6%;
     }
 }
@@ -49,11 +52,11 @@ ul {
     }
 }
 
-//.input {
-//    @include input;
-//}
-//
-//
-//.button {
-//    @include button;
-//}
+.checkbox {
+    @include checkbox;
+}
+
+
+.button {
+    @include button;
+}

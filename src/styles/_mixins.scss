@@ -1,0 +1,58 @@
+@use './colors';
+
+@mixin checkbox {
+    width: 25px;
+    height: 25px;
+    display: block;
+    position: relative;
+    cursor: pointer;
+    user-select: none;
+
+    & input {
+        position: absolute;
+        cursor: pointer;
+        opacity: 0;
+        height: 0;
+        width: 0;
+    }
+
+    &__checkmark {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 25px;
+        width: 25px;
+        border: 2px solid colors.$very-light-grayish-blue;
+        border-radius: 50%;
+
+        &:after {
+            width: 3px;
+            height: 7px;
+            border: solid white;
+            border-width: 0 2px 2px 0;
+            transform: rotate(45deg);
+            content: '';
+            position: absolute;
+            display: none;
+        }
+
+        &:hover {
+            background-color: colors.$very-light-grayish-blue;
+        }
+    }
+
+    & input:checked ~ .checkbox__checkmark {
+        background: colors.$check-background;
+        border: 0;
+    }
+
+    & input:checked ~ .checkbox__checkmark:after {
+        display: block;
+        top: 7px;
+        left: 10px;
+    }
+}
+
+@mixin button {
+
+}
