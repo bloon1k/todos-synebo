@@ -38,7 +38,10 @@
         }
 
         &:hover {
-            background-color: colors.$very-light-grayish-blue;
+            border: 2px solid transparent;
+            background-image: linear-gradient(white, white), radial-gradient(circle at top left, hsl(192, 100%, 67%),hsl(280, 87%, 65%));
+            background-origin: border-box;
+            background-clip: padding-box, border-box;
         }
     }
 
@@ -52,6 +55,11 @@
         top: 7px;
         left: 10px;
     }
+}
+
+.border-gradient {
+}
+.border-gradient-purple {
 }
 
 @mixin button {
