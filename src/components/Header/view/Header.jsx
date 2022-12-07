@@ -1,7 +1,7 @@
 import React from 'react'
 import './Header-styles.scss'
 // Assets
-import moon from '../../images/icon-moon.svg'
+import moon from '../../../images/icon-moon.svg'
 
 const Header = () => {
     return (
