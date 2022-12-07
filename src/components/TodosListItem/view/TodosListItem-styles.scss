@@ -1,0 +1,31 @@
+@use '../../../styles/colors';
+@import '../../../styles/mixins';
+
+.todos-list-item {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.2em;
+    background: colors.$white;
+    border-bottom: 2px solid colors.$very-light-grayish-blue;
+
+    &:first-child {
+        border-radius: 5px 5px 0 0;
+    }
+
+    &:hover .hidden {
+        opacity: 1
+    }
+
+    &__clickable {
+        display: flex;
+        gap: 1em;
+        align-items: center;
+
+        &:hover .checkbox__checkmark {
+            background-color: colors.$very-light-grayish-blue;
+        }
+    }
+}

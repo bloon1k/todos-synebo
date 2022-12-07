@@ -24,6 +24,7 @@
         width: 25px;
         border: 2px solid colors.$very-light-grayish-blue;
         border-radius: 50%;
+        transition: .2s all;
 
         &:after {
             width: 3px;
@@ -54,5 +55,6 @@
 }
 
 @mixin button {
-
+    background: 0;
+    border: 0;
 }

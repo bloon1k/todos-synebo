@@ -3,7 +3,7 @@
 @import './_mixins.scss';
 
 html,
-body, h1, h2, h3, h4, h5 {
+body, h1, h2, h3, h4, h5, p {
     margin: 0;
     padding: 0;
     font-size: 18px;
@@ -16,6 +16,7 @@ body {
 * {
     box-sizing: border-box;
     font-family: 'Josefin Sans', sans-serif;
+    color: colors.$very-dark-grayish-blue;
 }
 
 ul {
@@ -59,4 +60,14 @@ ul {
 
 .button {
     @include button;
+}
+
+.crossed {
+    text-decoration: line-through;
+    color: colors.$dark-grayish-blue;
+}
+
+.hidden {
+    opacity: 0;
+    transition: .2s all;
 }
