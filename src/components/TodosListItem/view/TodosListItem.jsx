@@ -5,12 +5,17 @@ import { useTodosListItemControls } from '../model/'
 // assets
 import cross from '../../../images/icon-cross.svg'
 
-const TodosListItem = ({ item }) => {
+const TodosListItem = ({ item, provided }) => {
     const { isChecked, handleCheck, handleDeleteTodo } =
         useTodosListItemControls(item)
 
     return (
-        <div className={'todos-list-item'}>
+        <div
+            className="todos-list-item"
+            {...provided.draggableProps}
+            {...provided.dragHandleProps}
+            ref={provided.innerRef}
+        >
             <div className="todos-list-item__clickable">
                 <label className="checkbox">
                     <input
@@ -20,7 +25,7 @@ const TodosListItem = ({ item }) => {
                     />
                     <span className="checkbox__checkmark"></span>
                 </label>
-                <p className={isChecked && 'crossed'} onClick={handleCheck}>
+                <p className={isChecked ? 'crossed' : ''} onClick={handleCheck}>
                     {item.text}
                 </p>
             </div>

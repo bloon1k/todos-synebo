@@ -2,6 +2,7 @@ import { useRef, useState } from 'react'
 // redux
 import { useSelector, useDispatch } from 'react-redux'
 import { setTodosList } from '../../../redux'
+import { v4 as uuid } from 'uuid'
 
 const useCreateTodoControls = () => {
     const dispatch = useDispatch()
@@ -13,6 +14,7 @@ const useCreateTodoControls = () => {
     function handleEnter(event) {
         if (event.key === 'Enter') {
             const newTodo = {
+                id: uuid(),
                 isCompleted: isChecked,
                 text: todoInputRef.current.value,
             }
