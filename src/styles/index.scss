@@ -37,6 +37,14 @@ ul {
         flex-direction: column;
         width: 37.6%;
     }
+
+    &__tip {
+        color: colors.$dark-grayish-blue;
+        font-size: 1em;
+        text-align: center;
+        margin-top: 3em;
+        opacity: .7;
+    }
 }
 
 .checkbox {

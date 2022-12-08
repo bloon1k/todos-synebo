@@ -1,0 +1,32 @@
+@use '../../../styles/colors';
+@use '../../../styles/screens';
+@import '../../../styles/mixins';
+
+.mobile-footer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 1.2em;
+    gap: 1em;
+    font-size: .8em;
+    border-radius: 5px;
+    background: colors.$white;
+    box-shadow: 0 0 10px colors.$very-light-grayish-blue;
+    margin-top: 2em;
+
+    &__link {
+        text-decoration: none;
+        color: colors.$dark-grayish-blue;
+        transition: .2s all;
+
+        &:hover {
+            color: colors.$very-dark-grayish-blue;
+        }
+    }
+}
+
+@media screen and (width > screens.$small-tablet) {
+    .mobile-footer {
+        display: none;
+    }
+}

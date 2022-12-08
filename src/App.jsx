@@ -1,7 +1,7 @@
 import React from 'react'
 import './styles/index.scss'
 // Children
-import { CreateTodo, Header, Footer } from './components'
+import { CreateTodo, Header, Footer, MobileFooter } from './components'
 import { Routes } from './utils/Routes'
 
 const App = () => {
@@ -12,6 +12,8 @@ const App = () => {
                 <CreateTodo />
                 <Routes />
                 <Footer />
+                <MobileFooter />
+                <p className={'app__tip'}>Drag and drop to reorder list</p>
             </div>
         </div>
     )
