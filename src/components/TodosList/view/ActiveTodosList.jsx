@@ -6,7 +6,7 @@ const ActiveTodosList = () => {
     const { todosList } = useTodosListControls()
 
     return (
-        <main className={'active-todos-list'}>
+        <main className={'todos-list'}>
             {todosList
                 .filter((todo) => !todo.isCompleted)
                 .map((todo) => (
