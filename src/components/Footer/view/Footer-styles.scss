@@ -1,4 +1,5 @@
 @use '../../../styles/colors';
+@use '../../../styles/screens';
 @import '../../../styles/mixins';
 
 .footer {
@@ -38,5 +39,11 @@
         &:hover {
             color: colors.$very-dark-grayish-blue;
         }
+    }
+}
+
+@media screen and (width <= screens.$small-tablet) {
+    .footer__filters {
+        display: none;
     }
 }

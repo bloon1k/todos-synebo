@@ -30,25 +30,12 @@ ul {
     flex-direction: column;
     align-items: center;
     width: 1440px;
-    height: 800px;
     background: url('../images/bg-desktop-light.jpg') no-repeat;
 
     &__components-wrapper {
         display: flex;
         flex-direction: column;
         width: 37.6%;
-    }
-}
-
-@media screen and (width <= screens.$desktop) {
-    .app {
-        width: 100%;
-    }
-}
-
-@media screen and (width <= screens.$mobile) {
-    .app {
-        background: url('../images/bg-mobile-light.jpg') no-repeat;
     }
 }
 
@@ -70,3 +57,52 @@ ul {
     opacity: 0;
     transition: .2s all;
 }
+
+@media screen and (width <= screens.$desktop) {
+    .app {
+        width: 100%;
+    }
+}
+
+@media screen and (width <= screens.$small-desktop) {
+    .app {
+        &__components-wrapper {
+            width: 55%;
+        }
+    }
+}
+
+@media screen and (width <= screens.$tablet) {
+    body {
+        font-size: 16px;
+    }
+
+    .app {
+        &__components-wrapper {
+            width: 75%;
+        }
+    }
+
+    .hidden {
+        opacity: 1;
+    }
+}
+
+@media screen and (width <= screens.$small-tablet) {
+    .app {
+        &__components-wrapper {
+            width: 90%;
+        }
+    }
+}
+
+@media screen and (width <= screens.$mobile) {
+    body {
+        font-size: 14px;
+    }
+
+    .app {
+        background: url('../images/bg-mobile-light.jpg') no-repeat;
+    }
+}
+
