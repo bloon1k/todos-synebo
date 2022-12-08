@@ -1,8 +1,8 @@
 import React from 'react'
 import './styles/index.scss'
 // Children
-import { CreateTodo, Header } from './components'
-import { TodosList } from './components/TodosList'
+import { CreateTodo, Header, Footer } from './components'
+import { Routes } from './utils/Routes'
 
 const App = () => {
     return (
@@ -10,7 +10,8 @@ const App = () => {
             <div className={'app__components-wrapper'}>
                 <Header />
                 <CreateTodo />
-                <TodosList />
+                <Routes />
+                <Footer />
             </div>
         </div>
     )
