@@ -1,0 +1,6 @@
+@use '../../../styles/colors';
+@import '../../../styles/mixins';
+
+.todos-list {
+    box-shadow: 0 0 10px colors.$very-light-grayish-blue;
+}

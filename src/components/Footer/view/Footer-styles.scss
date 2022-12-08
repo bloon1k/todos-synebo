@@ -1,0 +1,49 @@
+@use '../../../styles/colors';
+@use '../../../styles/screens';
+@import '../../../styles/mixins';
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    background: colors.$white;
+    padding: 1.2em;
+    border-radius: 0 0 5px 5px;
+    box-shadow: 0 0 10px colors.$very-light-grayish-blue;
+
+    &__counter {
+        font-size: .8em;
+        color: colors.$dark-grayish-blue;
+    }
+
+    &__filters {
+        display: flex;
+        gap: 1em;
+        font-size: .8em;
+    }
+
+    &__link {
+        text-decoration: none;
+        color: colors.$dark-grayish-blue;
+        transition: .2s all;
+
+        &:hover {
+            color: colors.$very-dark-grayish-blue;
+        }
+    }
+
+    &__clear {
+        font-size: .8em;
+        color: colors.$dark-grayish-blue;
+        transition: .2s all;
+
+        &:hover {
+            color: colors.$very-dark-grayish-blue;
+        }
+    }
+}
+
+@media screen and (width <= screens.$small-tablet) {
+    .footer__filters {
+        display: none;
+    }
+}

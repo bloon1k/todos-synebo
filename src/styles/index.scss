@@ -1,15 +1,22 @@
 @use './colors.scss';
+@use './_screens.scss';
 @import './_mixins.scss';
 
 html,
-body, h1, h2, h3, h4, h5 {
+body, h1, h2, h3, h4, h5, p, ul {
     margin: 0;
     padding: 0;
+    font-size: 18px;
+}
+
+body {
+    background: colors.$very-light-gray;
 }
 
 * {
     box-sizing: border-box;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Josefin Sans', sans-serif;
+    color: colors.$very-dark-grayish-blue;
 }
 
 ul {
@@ -17,14 +24,93 @@ ul {
 }
 
 .app {
+    margin: 0 auto;
+    padding-top: 4.35em;
     display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 1440px;
+    background: url('../images/bg-desktop-light.jpg') no-repeat;
+
+    &__components-wrapper {
+        display: flex;
+        flex-direction: column;
+        width: 37.6%;
+    }
+
+    &__tip {
+        color: colors.$dark-grayish-blue;
+        font-size: 1em;
+        text-align: center;
+        margin-top: 3em;
+        opacity: .7;
+    }
 }
 
-//.input {
-//    @include input;
-//}
-//
-//
-//.button {
-//    @include button;
-//}
+.checkbox {
+    @include checkbox;
+}
+
+
+.button {
+    @include button;
+}
+
+.crossed {
+    text-decoration: line-through;
+    color: colors.$dark-grayish-blue;
+}
+
+.hidden {
+    opacity: 0;
+    transition: .2s all;
+}
+
+@media screen and (width <= screens.$desktop) {
+    .app {
+        width: 100%;
+    }
+}
+
+@media screen and (width <= screens.$small-desktop) {
+    .app {
+        &__components-wrapper {
+            width: 55%;
+        }
+    }
+}
+
+@media screen and (width <= screens.$tablet) {
+    body {
+        font-size: 16px;
+    }
+
+    .app {
+        &__components-wrapper {
+            width: 75%;
+        }
+    }
+
+    .hidden {
+        opacity: 1;
+    }
+}
+
+@media screen and (width <= screens.$small-tablet) {
+    .app {
+        &__components-wrapper {
+            width: 90%;
+        }
+    }
+}
+
+@media screen and (width <= screens.$mobile) {
+    body {
+        font-size: 14px;
+    }
+
+    .app {
+        background: url('../images/bg-mobile-light.jpg') no-repeat;
+    }
+}
+

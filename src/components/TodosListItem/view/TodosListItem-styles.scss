@@ -1,0 +1,34 @@
+@use '../../../styles/colors';
+@import '../../../styles/mixins';
+
+.todos-list-item {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.2em;
+    background: colors.$white;
+    border-bottom: 2px solid colors.$very-light-grayish-blue;
+
+    &:first-child {
+        border-radius: 5px 5px 0 0;
+    }
+
+    &:hover .hidden {
+        opacity: 1
+    }
+
+    &__clickable {
+        display: flex;
+        gap: 1em;
+        align-items: center;
+
+        &:hover .checkbox__checkmark {
+            border: 2px solid transparent;
+            background-image: linear-gradient(white, white), radial-gradient(circle at top left, hsl(192, 100%, 67%),hsl(280, 87%, 65%));
+            background-origin: border-box;
+            background-clip: padding-box, border-box;
+        }
+    }
+}
