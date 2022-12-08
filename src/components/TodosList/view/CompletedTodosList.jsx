@@ -6,13 +6,13 @@ const CompletedTodosList = () => {
     const { todosList } = useTodosListControls()
 
     return (
-        <section className={'completed-todos-list'}>
+        <main className={'completed-todos-list'}>
             {todosList
                 .filter((todo) => todo.isCompleted)
                 .map((todo) => (
                     <TodosListItem item={todo} key={uuid()} />
                 ))}
-        </section>
+        </main>
     )
 }
 

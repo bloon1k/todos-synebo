@@ -10,11 +10,11 @@ const TodosList = () => {
     const { todosList } = useTodosListControls()
 
     return (
-        <section className={'todos-list'}>
+        <main className={'todos-list'}>
             {todosList.map((todo) => (
                 <TodosListItem item={todo} key={uuid()} />
             ))}
-        </section>
+        </main>
     )
 }
 
